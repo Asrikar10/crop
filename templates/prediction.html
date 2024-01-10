@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crop Prediction Form</title>
+	<style>
+		body {
+			background-color: #1a1a1a;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #4CAF50;
+			text-align: center;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		label {
+			margin-top: 20px;
+			font-size: 18px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		input {
+			margin-top: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			width: 300px;
+			text-align: center;
+		}
+		input:focus {
+			outline: none;
+			box-shadow: 0 0 5px #4CAF50;
+		}
+		button {
+			margin-top: 20px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 18px;
+			width: 150px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Crop Prediction Form</h1>
+	<form action='/prediction'method='POST'>
+		<label for="nitrogen">Nitrogen:</label>
+		<input type="number" id="nitrogen" name="nitrogen" required>
+
+		<label for="phosphorus">Phosphorus:</label>
+		<input type="number" id="phosphorus" name="phosphorus" required>
+
+		<label for="potassium">Potassium:</label>
+		<input type="number" id="potassium" name="potassium" required>
+
+		<label for="temperature">Temperature:</label>
+		<input type="number" id="temperature" name="temperature" required>
+
+		<label for="humidity">Humidity:</label>
+		<input type="number" id="humidity" name="humidity" required>
+
+		<label for="ph">pH:</label>
+		<input type="number" id="ph" name="ph" required>
+
+		<label for="rainfall">Rainfall:</label>
+		<input type="number" id="rainfall" name="rainfall" required>
+
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
